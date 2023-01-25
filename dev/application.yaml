@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/anawatsupapoch/infra.git
-    targetRevision: master
+    targetRevision: HEAD
     path: helm/nginx
   syncPolicy:
     automated:
