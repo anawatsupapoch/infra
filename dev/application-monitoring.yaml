@@ -11,7 +11,9 @@ spec:
   source:
     repoURL: https://github.com/anawatsupapoch/infra.git
     targetRevision: HEAD
+    # helm:
+    #   releaseName: kube-prometheus-stack    
     path: helm/monitoring
-  syncPolicy:
-    automated: {}
+  # syncPolicy:
+  #   automated: {}
       # prune: true
