@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kube-prometheus-stack
-  namespace: myargo
+  namespace: monitoring
 spec:
   destination:
     server: https://kubernetes.default.svc
@@ -13,5 +13,5 @@ spec:
     targetRevision: HEAD
     path: helm/monitoring
   syncPolicy:
-    automated:
-      prune: true
+    automated: {}
+      # prune: true

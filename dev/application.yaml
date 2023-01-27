@@ -9,9 +9,11 @@ spec:
     namespace: default
   project: default
   source:
-    repoURL: https://github.com/anawatsupapoch/infra.git
+    repoURL: https://github.com/anawatsupapoch/infra.git 
     targetRevision: HEAD
+    helm:
+      releaseName: nginx
     path: helm/nginx
   syncPolicy:
-    automated:
-      prune: true
+    automated: {}
+      # prune: true
