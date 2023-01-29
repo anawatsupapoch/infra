@@ -5,7 +5,7 @@ metadata:
   namespace: myargo
 spec:
   destination:
-    server: https://kubernetes.default.svc
+    server: https://127.0.0.1:54407
     namespace: default
   project: default
   source:
