@@ -1,18 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-application
+  name: nginx-application-prod
   namespace: myargo
 spec:
   destination:
-    server: https://127.0.0.1:54407
+    server: https://127.0.0.1:59254
     namespace: default
   project: default
   source:
     repoURL: https://github.com/anawatsupapoch/infra.git 
     targetRevision: HEAD
-    # helm:
-    #   releaseName: nginx
+    helm:
+      releaseName: nginx-application-prod
+      skipCrds: true
     path: helm/nginx
   ignoreDifferences:
   - group: apps
