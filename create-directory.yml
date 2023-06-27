@@ -1,4 +1,13 @@
-- name: Creates directory
-  file:
-    path: /test/anawat
-    state: directory
+---
+- hosts: all
+
+  become: true
+  tasks:
+    - name: Creates directory
+      file:
+        path: /test/anawat
+        state: directory
+
+
+
+
